@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'https://cdn.skypack.dev/axios';
 
 async function query(data) {
 	const response = await axios.post('https://api-inference.huggingface.co/models/google/flan-t5-xxl', {
