@@ -9,11 +9,11 @@ chatForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const userInput = document.getElementById("user-input").value;
-  addMessage(userInput, "user-message");
+  addMessage("Q." + userInput, "user-message");
 
   fetchResponse(userInput)
     .then((response) => {
-      addMessage(response, "bot-message");
+      addMessage(`A. ${response}`, "bot-message");
     })
     .catch((error) => {
       console.error("Error fetching response from Hugging Face API:", error);
@@ -25,7 +25,7 @@ chatForm.addEventListener("submit", (e) => {
 function addMessage(content, className) {
   const messageElement = document.createElement("div");
   messageElement.classList.add(className);
-  messageElement.textContent = content;
+  messageElement.textContent = `${content}`;
   messages.appendChild(messageElement);
   messages.scrollTop = messages.scrollHeight;
 }
@@ -39,7 +39,6 @@ async function fetchResponse(userInput) {
     },
     body: JSON.stringify({ inputs: userInput }),
   };
-
   try {
     const response = await fetch(API_URL, requestOptions);
     if (!response.ok) {
