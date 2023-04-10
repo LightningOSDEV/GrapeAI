@@ -27,7 +27,7 @@ function addMessage(content, className) {
   messageElement.classList.add(className);
   messageElement.textContent = content;
   messages.appendChild(messageElement);
-  messages.scrollTop = messages.scrollHeight; // Scroll to the bottom
+  messages.scrollTop = messages.scrollHeight;
 }
 
 async function fetchResponse(userInput) {
