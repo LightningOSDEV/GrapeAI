@@ -1,22 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat with Hugging Face</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Powered by GrapeMind-1.3</h1>
-    <div class="chatbox">
-      <div class="messages" id="messages"></div>
+<html>
+  <head>
+    <title>Grape AI | Free Beta Release</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="server.js"></script>
+
+    <style>
+      /* Add some styles to the chatbot container */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: darkgray;
+        line-height: 1.2;
+      }
+  
+      
+      /* Style the form inputs */
+      input[type="text"], button[type="button"] {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+      }
+      
+      /* Style the chatbot response container */
+
+
+    </style>
+  </head>
+  <body>
+    <div id="chatbot-response">
+      <div id="chatbot-response-buttons">
+        <button>Copy</button>
+        <button>New topic</button>
+        <button>Regenerate Response</button>
+      </div>
+      <div id="usr"></div>
+      <img id="imgElement" />
+      <div style="text-align: center; font-family: Arial, sans-serif;">
+        <h1 style="font-size: 48px; font-weight: bold; margin-bottom: 10px; color: black; text-shadow: 2px 2px #ccc;">GrapeAI</h1>
+        <p style="font-size: 20px; margin-bottom: 20px; color: #333;">But with the capabilites of GrapeMind-1.3</p>
+        
+       
+      
+      </div>
     </div>
-    <form id="chat-form">
-      <input type="text" id="user-input" placeholder="Ask GrapeAI">
-      <button type="submit">Send</button>
+   
+    <div id="chatbot-container" style="background-color: white; opacity: 1.2; z-index: 999; justify-content:center;">
+      <form onsubmit="event.preventDefault(); getBotResponse();">
+        <input type="text" id="user-input" placeholder="Message" width="100%">
+        <button type="submit" id="submit-button" onclick="clearResponse()">Send</button>
+      </form>
+    </div>
+    
+    <style>
+#chatbot-container {
+  display: flex;
+
+  width: 100%;
+}
+    </style>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- HTML -->
+<div class="error"></div>
+  
+
+<!-- index.html -->
+
+
+
+  
+
+       
+
+      <footer>
+        <h1 style="font-size: small;"></h1>
+      </footer>
+    </div>                                                                                                                                                                                                
+    </body>
+</html>
+
+
+
+<div class="sidebar-toggle">
+  <span class="arrow-down"></span>
+</div>
+<div id="sidebar-container">
+  <nav class="menu">
+    <ul>
+      <section class="services">
+        <ul>
+          <button onclick="showHelpMenu()">Help</button>
+
+<div id="modal" class="modal">
+  <div class="modal-content" style="border-radius: 16px; border: 1px solid transparent;">
+    <span class="close">&times;</span>
+    <h2>Lightning Support</h2>
+    <p>Hey there! Looks like you need some help. Here's some information we can give you:<br>Q: How do I upgrade to premium? <br>A: Upgrade to premium wont be released until July 2023.<br>Q: I keep getting "An issue occurred, please contact lightning if this issue persists" and it wont go away <br>A: Clear browser cache or log out and log back in, if it still occurrs please contact Grape or Lightning support.
+    <br>Q: GrapeAI doesn't respond?<br>A: If GrapeAI is not responding that could mean one of many things such as, server errror, server outage, too many requests, or the server is down for maintenence. Checking the server status on Grape is the best way too go. https://lightning.grapechat.repl.co/server<br>/status</p>
+    <br><button>i have an issue</button>
+  </div>
+</div>
+          <script>
+
+          </script>
+          <button onclick="showSignUp()">Sign Up</button>
+
+<div id="sign-up" class="sign-up">
+  <div class="sign-up-content">
+    <span class="close">&times;</span>
+    <h2>GrapeAI Sign Up</h2>
+    <form>
+      <input type="text" id="name" name="name" placeholder="Username"><br>
+      <input type="text" id="password" name="password" placeholder="New password"><br>
+      <button type="button" style="color: black;" onclick="saveUserInfo()">Submit</button>
+      <h1 style="font-size: medium;">Have an account? Log in</h1>
     </form>
   </div>
-  <script src="app.js"></script>
-</body>
-</html>
+</div>          <div id="user-info">Get unlimited chat time with signing in.</div>
+         <h1 onclick="window.location.href='index.html'">New chat +</h1>
+         <div id="chats">Recent conversations</div>
+
+         <script>
+          
+         </script>
+        </ul>
+      </section> </ul>
+   
+      <div id="myModal" class="modal" style="border-radius: 16px;">
+        <div class="modal-content" style="border-radius:16px;">
+          <span class="close">&times;</span>
+          <p>You have hit the maximum number of chats. Delete some to continue.</p>
+          <button id="continue-btn">Continue</button>
+        </div>
+      </div>
+
+      <style>
+       
+      </style>
+    </div>
+  </nav>
+</div>
+<script>
+  /* Toggle the sidebar menu when the arrow is clicked */
+document.querySelector('.sidebar-toggle').addEventListener('click', function() {
+  document.querySelector('#sidebar-container').classList.toggle('active');
+});
+
+</script>
+<script>
+
+</script>
